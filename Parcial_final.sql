@@ -48,7 +48,7 @@ CREATE OR REPLACE PROCEDURE CALCULAR_SIMULACION(
     BEGIN
         DELETE FROM amortizacion;
         tasa_nominal_mensual := power ( (1 + (tasa_efectiva_anual / 100)), (30 / 360)) - 1;
-        tasa := (tasa_nominal_mensual / 100);
+        tasa := tasa_nominal_mensual;
         cuota_mensual = ()
         DBMS_OUTPUT.PUT_LINE (tasa_nominal_mensual);
 END;
